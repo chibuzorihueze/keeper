@@ -4,14 +4,16 @@ import Footer from "./components/footer";
 import Note from "./components/note";
 import details from "./details";
 
-function createNotes(loopNote){
-  return(
-    <Note
-    id = {loopNote.key}
-    title = {loopNote.title}
-    subtitle= {loopNote.content}/>
-  )
-}
+//this commented function loops through details.js
+//i used the alternate arrow function to loop through it insted
+// function createNotes(loopNote){
+//   return(
+//     <Note
+//     id = {loopNote.key}
+//     title = {loopNote.title}
+//     subtitle= {loopNote.content}/>
+//   )
+// }
 
 
 
@@ -19,9 +21,13 @@ function createNotes(loopNote){
 function App() {
   return (
     <div className="App">
-      <Header />
-     {details.map(createNotes)}
-      <Footer/>
+        <Header />
+          {details.map((loopNote) => 
+          <Note
+            id = {loopNote.key}
+            title = {loopNote.title}
+            subtitle= {loopNote.content}/>)}
+        <Footer/>
     </div>
   );
 }
