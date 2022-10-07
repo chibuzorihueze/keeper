@@ -22,11 +22,11 @@ function App() {
   return (
     <div className="App">
         <Header />
-          {details.map((loopNote) => 
+          {details.map((loopNote) => (
           <Note
             id = {loopNote.key}
             title = {loopNote.title}
-            subtitle= {loopNote.content}/>)}
+            subtitle= {loopNote.content}/>))}
         <Footer/>
     </div>
   );
